@@ -643,6 +643,7 @@ remote: Resolving deltas: 100% (4/4), completed with 2 local objects.
 To https://github.com/pinsoegustave/Gym-Git-Exercises-Solutions.git
    1fd47d4..12912f0  master -> master
 gymkura@kuras-iMac Gym-Git-Exercises-Solutions % 
+<<<<<<< HEAD
 ```
 
 ##Bundle 3
@@ -873,4 +874,6 @@ remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
 To https://github.com/pinsoegustave/Gym-Git-Exercises-Solutions.git
    9b204ce..3367779  f/faq-page -> f/faq-page
 gymkura@kuras-iMac Gym-Git-Exercises-Solutions % 
+=======
+>>>>>>> parent of c781386 (Git: (bundle 3): Exercise 2)
 ```
