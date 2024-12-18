@@ -644,3 +644,233 @@ To https://github.com/pinsoegustave/Gym-Git-Exercises-Solutions.git
    1fd47d4..12912f0  master -> master
 gymkura@kuras-iMac Gym-Git-Exercises-Solutions % 
 ```
+
+##Bundle 3
+
+### Exercise 1
+```bash
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git branch -m ft/team-page
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git add .
+\%                                                                                                                                                                                                                                                                   
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git add .
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git commit -m "Added player names"
+[ft/team-page 67ec839] Added player names
+ 2 files changed, 10 insertions(+), 1 deletion(-)
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git push origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/pinsoegustave/Gym-Git-Exercises-Solutions.git'
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git push origin ft/team-page
+fatal: unable to access 'https://github.com/pinsoegustave/Gym-Git-Exercises-Solutions.git/': Could not resolve host: github.com
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git push origin ft/team-page
+fatal: unable to access 'https://github.com/pinsoegustave/Gym-Git-Exercises-Solutions.git/': Could not resolve host: github.com
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git push origin ft/team-page
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 516 bytes | 516.00 KiB/s, done.
+Total 4 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+remote: 
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting:
+remote:      https://github.com/pinsoegustave/Gym-Git-Exercises-Solutions/pull/new/ft/team-page
+remote: 
+To https://github.com/pinsoegustave/Gym-Git-Exercises-Solutions.git
+ * [new branch]      ft/team-page -> ft/team-page
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git checkout master
+branch 'master' set up to track 'origin/master'.
+Switched to a new branch 'master'
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git branch -m ft/contact-page
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git checkout ft/team-page
+Switched to branch 'ft/team-page'
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git log
+commit 67ec839bb83f3d50dcde355ae61178857bac68b8 (HEAD -> ft/team-page, origin/ft/team-page)
+Author: pinsoegustave <ntwalimudasubirag@gmail.com>
+Date:   Wed Dec 18 14:04:01 2024 +0200
+
+    Added player names
+
+commit 52744a22675cc5a217ddb60e3d0a0f75a8e56d98 (origin/master, ft/contact-page)
+Author: pinsoegustave <ntwalimudasubirag@gmail.com>
+Date:   Wed Dec 18 13:27:23 2024 +0200
+
+    Git: (Bundle 2): Exercise 2
+
+commit 12912f00a6001ac492c3d0f0cd6dbfd254d0c9ca
+Author: pinsoegustave <ntwalimudasubirag@gmail.com>
+Date:   Wed Dec 18 13:24:57 2024 +0200
+
+    Resolve conflicts
+
+commit e095578a2003d8e3361dc79d60f5efab60e36436
+Author: pinsoegustave <ntwalimudasubirag@gmail.com>
+Date:   Wed Dec 18 13:19:51 2024 +0200
+
+    Solved conflicts
+
+commit 1fd47d4efa1707ae9346c0c1178425343689916a
+Merge: 9cde33a c261fb5
+Author: Pinsoe Gustave <108759573+pinsoegustave@users.noreply.github.com>
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git checkout ft/contact-page
+Switched to branch 'ft/contact-page'
+Your branch is up to date with 'origin/master'.
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git cherry-pick 67ec839bb83f3d50dcde355ae61178857bac68b8
+[ft/contact-page 8294f25] Added player names
+ Date: Wed Dec 18 14:04:01 2024 +0200
+ 2 files changed, 10 insertions(+), 1 deletion(-)
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git log
+commit 8294f2505b3ea7ad191eeadb048dccdcb96b78ab (HEAD -> ft/contact-page)
+Author: pinsoegustave <ntwalimudasubirag@gmail.com>
+Date:   Wed Dec 18 14:04:01 2024 +0200
+
+    Added player names
+
+commit 52744a22675cc5a217ddb60e3d0a0f75a8e56d98 (origin/master)
+Author: pinsoegustave <ntwalimudasubirag@gmail.com>
+Date:   Wed Dec 18 13:27:23 2024 +0200
+
+    Git: (Bundle 2): Exercise 2
+
+commit 12912f00a6001ac492c3d0f0cd6dbfd254d0c9ca
+Author: pinsoegustave <ntwalimudasubirag@gmail.com>
+Date:   Wed Dec 18 13:24:57 2024 +0200
+
+    Resolve conflicts
+
+commit e095578a2003d8e3361dc79d60f5efab60e36436
+Author: pinsoegustave <ntwalimudasubirag@gmail.com>
+Date:   Wed Dec 18 13:19:51 2024 +0200
+
+    Solved conflicts
+
+commit 1fd47d4efa1707ae9346c0c1178425343689916a
+Merge: 9cde33a c261fb5
+Author: Pinsoe Gustave <108759573+pinsoegustave@users.noreply.github.com>
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git add .       
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git commit -m "contact page added" 
+[ft/contact-page f15a387] contact page added
+ 1 file changed, 11 insertions(+)
+ create mode 100644 conatct.html
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git push origin ft/contact-page
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 917 bytes | 917.00 KiB/s, done.
+Total 7 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 3 local objects.
+remote: 
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote:      https://github.com/pinsoegustave/Gym-Git-Exercises-Solutions/pull/new/ft/contact-page
+remote: 
+To https://github.com/pinsoegustave/Gym-Git-Exercises-Solutions.git
+ * [new branch]      ft/contact-page -> ft/contact-page
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git branch f/faq-page
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git status
+On branch ft/contact-page
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git checkout f/faq-page
+Switched to branch 'f/faq-page'
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git add .
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git commit -m "frequently asked questions"
+[f/faq-page 9b204ce] frequently asked questions
+ 1 file changed, 16 insertions(+)
+ create mode 100644 faq.html
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git push origin f/faq-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 515 bytes | 515.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'f/faq-page' on GitHub by visiting:
+remote:      https://github.com/pinsoegustave/Gym-Git-Exercises-Solutions/pull/new/f/faq-page
+remote: 
+To https://github.com/pinsoegustave/Gym-Git-Exercises-Solutions.git
+ * [new branch]      f/faq-page -> f/faq-page
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git log                                 
+commit 9b204ce78b516c4e6e8d4736237572b098768c0d (HEAD -> f/faq-page, origin/f/faq-page)
+Author: pinsoegustave <ntwalimudasubirag@gmail.com>
+Date:   Wed Dec 18 14:32:59 2024 +0200
+
+    frequently asked questions
+
+commit f15a3877c741b3ed32c85c750133156779de94f6 (origin/ft/contact-page, ft/contact-page)
+Author: pinsoegustave <ntwalimudasubirag@gmail.com>
+Date:   Wed Dec 18 14:23:57 2024 +0200
+
+    contact page added
+
+commit 8294f2505b3ea7ad191eeadb048dccdcb96b78ab
+Author: pinsoegustave <ntwalimudasubirag@gmail.com>
+Date:   Wed Dec 18 14:04:01 2024 +0200
+
+    Added player names
+
+commit 52744a22675cc5a217ddb60e3d0a0f75a8e56d98 (origin/master)
+Author: pinsoegustave <ntwalimudasubirag@gmail.com>
+Date:   Wed Dec 18 13:27:23 2024 +0200
+
+    Git: (Bundle 2): Exercise 2
+
+commit 12912f00a6001ac492c3d0f0cd6dbfd254d0c9ca
+Author: pinsoegustave <ntwalimudasubirag@gmail.com>
+Date:   Wed Dec 18 13:24:57 2024 +0200
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git revert 67ec839bb83f3d50dcde355ae61178857bac68b8
+hint: Waiting for your editor to close the file... error: There was a problem with the editor 'vi'.
+Please supply the message using either -m or -F option.
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git revert 67ec839bb83f3d50dcde355ae61178857bac68b8
+error: your local changes would be overwritten by revert.
+hint: commit your changes or stash them to proceed.
+fatal: revert failed
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git push origin ft/faq-page
+error: src refspec ft/faq-page does not match any
+error: failed to push some refs to 'https://github.com/pinsoegustave/Gym-Git-Exercises-Solutions.git'
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git status
+On branch f/faq-page
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+        modified:   team.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        q
+
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git rm q
+fatal: pathspec 'q' did not match any files
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git add .
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git push origin ft/faq-page
+error: src refspec ft/faq-page does not match any
+error: failed to push some refs to 'https://github.com/pinsoegustave/Gym-Git-Exercises-Solutions.git'
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git revert 67ec839bb83f3d50dcde355ae61178857bac68b8
+error: your local changes would be overwritten by revert.
+hint: commit your changes or stash them to proceed.
+fatal: revert failed
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git add .
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git commit -m "final faq commit"
+[f/faq-page 3367779] final faq commit
+ 3 files changed, 13 insertions(+), 10 deletions(-)
+ create mode 100644 q
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % 
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git push origin f/faq-page
+fatal: unable to access 'https://github.com/pinsoegustave/Gym-Git-Exercises-Solutions.git/': Could not resolve host: github.com
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git push origin f/faq-page
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 649 bytes | 649.00 KiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/pinsoegustave/Gym-Git-Exercises-Solutions.git
+   9b204ce..3367779  f/faq-page -> f/faq-page
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % 
+```
