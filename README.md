@@ -875,3 +875,337 @@ To https://github.com/pinsoegustave/Gym-Git-Exercises-Solutions.git
 gymkura@kuras-iMac Gym-Git-Exercises-Solutions % 
 ```
 
+### Exercise 2
+```bash
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git checkout f/faq-page
+Switched to branch 'f/faq-page'
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git branch -m ft/home-page-redesign  
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git add .
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git commit -m "back to homepage from bundle 3"
+[master 1a5ca17] back to homepage from bundle 3
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git push origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 389 bytes | 389.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/pinsoegustave/Gym-Git-Exercises-Solutions.git
+   d8ea1a3..1a5ca17  master -> master
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git checkout ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git rebase master
+Auto-merging README.md
+CONFLICT (content): Merge conflict in README.md
+error: could not apply 8294f25... Added player names
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply 8294f25... Added player names
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git log
+commit 1a5ca173cb5523c37baba7f968e5c0a6de0d13cd (HEAD, origin/master, master)
+Author: pinsoegustave <ntwalimudasubirag@gmail.com>
+Date:   Wed Dec 18 15:08:33 2024 +0200
+
+    back to homepage from bundle 3
+
+commit d8ea1a35f4a07e31fade48646e11af32df14ccc8
+Author: pinsoegustave <ntwalimudasubirag@gmail.com>
+Date:   Wed Dec 18 15:01:52 2024 +0200
+
+    Git: (Bundle3): Exercise 1
+
+commit 52744a22675cc5a217ddb60e3d0a0f75a8e56d98
+Author: pinsoegustave <ntwalimudasubirag@gmail.com>
+Date:   Wed Dec 18 13:27:23 2024 +0200
+
+    Git: (Bundle 2): Exercise 2
+
+commit 12912f00a6001ac492c3d0f0cd6dbfd254d0c9ca
+Author: pinsoegustave <ntwalimudasubirag@gmail.com>
+Date:   Wed Dec 18 13:24:57 2024 +0200
+
+    Resolve conflicts
+
+commit e095578a2003d8e3361dc79d60f5efab60e36436
+Author: pinsoegustave <ntwalimudasubirag@gmail.com>
+Date:   Wed Dec 18 13:19:51 2024 +0200
+
+    Solved conflicts
+
+commit 1fd47d4efa1707ae9346c0c1178425343689916a
+Merge: 9cde33a c261fb5
+Author: Pinsoe Gustave <108759573+pinsoegustave@users.noreply.github.com>
+Date:   Wed Dec 18 13:09:59 2024 +0200
+
+    Merge pull request #4 from pinsoegustave/ft/service-redesign
+    
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git rebase       
+fatal: It seems that there is already a rebase-merge directory, and
+I wonder if you are in the middle of another rebase.  If that is the
+case, please try
+        git rebase (--continue | --abort | --skip)
+If that is not the case, please
+        rm -fr ".git/rebase-merge"
+and run me again.  I am stopping in case you still have something
+valuable there.
+
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git rebase --continue
+README.md: needs merge
+You must edit all merge conflicts and then
+mark them as resolved using git add
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git rebase --continue
+README.md: needs merge
+You must edit all merge conflicts and then
+mark them as resolved using git add
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git add .
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git status
+interactive rebase in progress; onto 1a5ca17
+Last command done (1 command done):
+   pick 8294f25 Added player names
+Next commands to do (3 remaining commands):
+   pick f15a387 contact page added
+   pick 9b204ce frequently asked questions
+  (use "git rebase --edit-todo" to view and edit)
+You are currently rebasing branch 'ft/home-page-redesign' on '1a5ca17'.
+  (all conflicts fixed: run "git rebase --continue")
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+        modified:   team.html
+
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git add .         
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git commit -m "After conflict resolve"  
+[detached HEAD 5c70138] After conflict resolve
+ 3 files changed, 11 insertions(+), 1 deletion(-)
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git push origin ft/home-page-redesign
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: 
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/pinsoegustave/Gym-Git-Exercises-Solutions/pull/new/ft/home-page-redesign
+remote: 
+To https://github.com/pinsoegustave/Gym-Git-Exercises-Solutions.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git push origin master               
+Everything up-to-date
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git checkout master
+Warning: you are leaving 1 commit behind, not connected to
+any of your branches:
+
+  5c70138 After conflict resolve
+
+If you want to keep it by creating a new branch, this may be a good time
+to do so with:
+
+ git branch <new-branch-name> 5c70138
+
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git checkout ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git log
+commit 3367779d2a768bec65d5a191c3bb99ea1d8a8ec1 (HEAD -> ft/home-page-redesign, origin/ft/home-page-redesign, origin/f/faq-page)
+Author: pinsoegustave <ntwalimudasubirag@gmail.com>
+Date:   Wed Dec 18 14:46:24 2024 +0200
+
+    final faq commit
+
+commit 9b204ce78b516c4e6e8d4736237572b098768c0d
+Author: pinsoegustave <ntwalimudasubirag@gmail.com>
+Date:   Wed Dec 18 14:32:59 2024 +0200
+
+    frequently asked questions
+
+commit f15a3877c741b3ed32c85c750133156779de94f6 (origin/ft/contact-page, ft/contact-page)
+Author: pinsoegustave <ntwalimudasubirag@gmail.com>
+Date:   Wed Dec 18 14:23:57 2024 +0200
+
+    contact page added
+
+commit 8294f2505b3ea7ad191eeadb048dccdcb96b78ab
+Author: pinsoegustave <ntwalimudasubirag@gmail.com>
+Date:   Wed Dec 18 14:04:01 2024 +0200
+
+    Added player names
+
+commit 52744a22675cc5a217ddb60e3d0a0f75a8e56d98
+Author: pinsoegustave <ntwalimudasubirag@gmail.com>
+Date:   Wed Dec 18 13:27:23 2024 +0200
+
+    Git: (Bundle 2): Exercise 2
+
+commit 12912f00a6001ac492c3d0f0cd6dbfd254d0c9ca
+Author: pinsoegustave <ntwalimudasubirag@gmail.com>
+Date:   Wed Dec 18 13:24:57 2024 +0200
+
+    Resolve conflicts
+
+commit e095578a2003d8e3361dc79d60f5efab60e36436
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git log
+commit 1a5ca173cb5523c37baba7f968e5c0a6de0d13cd (HEAD -> master, origin/master)
+Author: pinsoegustave <ntwalimudasubirag@gmail.com>
+Date:   Wed Dec 18 15:08:33 2024 +0200
+
+    back to homepage from bundle 3
+
+commit d8ea1a35f4a07e31fade48646e11af32df14ccc8
+Author: pinsoegustave <ntwalimudasubirag@gmail.com>
+Date:   Wed Dec 18 15:01:52 2024 +0200
+
+    Git: (Bundle3): Exercise 1
+
+commit 52744a22675cc5a217ddb60e3d0a0f75a8e56d98
+Author: pinsoegustave <ntwalimudasubirag@gmail.com>
+Date:   Wed Dec 18 13:27:23 2024 +0200
+
+    Git: (Bundle 2): Exercise 2
+
+commit 12912f00a6001ac492c3d0f0cd6dbfd254d0c9ca
+Author: pinsoegustave <ntwalimudasubirag@gmail.com>
+Date:   Wed Dec 18 13:24:57 2024 +0200
+
+    Resolve conflicts
+
+commit e095578a2003d8e3361dc79d60f5efab60e36436
+Author: pinsoegustave <ntwalimudasubirag@gmail.com>
+Date:   Wed Dec 18 13:19:51 2024 +0200
+
+    Solved conflicts
+
+commit 1fd47d4efa1707ae9346c0c1178425343689916a
+Merge: 9cde33a c261fb5
+Author: Pinsoe Gustave <108759573+pinsoegustave@users.noreply.github.com>
+Date:   Wed Dec 18 13:09:59 2024 +0200
+
+    Merge pull request #4 from pinsoegustave/ft/service-redesign
+    
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git add .
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git commit -m "the table things "
+[master 9289ad2] the table things
+ 1 file changed, 2 insertions(+)
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git push origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 347 bytes | 347.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/pinsoegustave/Gym-Git-Exercises-Solutions.git
+   1a5ca17..9289ad2  master -> master
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git checkout ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git rebase master
+fatal: It seems that there is already a rebase-merge directory, and
+I wonder if you are in the middle of another rebase.  If that is the
+case, please try
+        git rebase (--continue | --abort | --skip)
+If that is not the case, please
+        rm -fr ".git/rebase-merge"
+and run me again.  I am stopping in case you still have something
+valuable there.
+
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git rm -fr ".git/rebase-merge"
+fatal: pathspec '.git/rebase-merge' did not match any files
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git rebase master             
+fatal: It seems that there is already a rebase-merge directory, and
+I wonder if you are in the middle of another rebase.  If that is the
+case, please try
+        git rebase (--continue | --abort | --skip)
+If that is not the case, please
+        rm -fr ".git/rebase-merge"
+and run me again.  I am stopping in case you still have something
+valuable there.
+
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git rebase --contine
+error: unknown option `contine'
+usage: git rebase [-i] [options] [--exec <cmd>] [--onto <newbase> | --keep-base] [<upstream> [<branch>]]
+   or: git rebase [-i] [options] [--exec <cmd>] [--onto <newbase>] --root [<branch>]
+   or: git rebase --continue | --abort | --skip | --edit-todo
+
+    --onto <revision>     rebase onto given branch instead of upstream
+    --keep-base           use the merge-base of upstream and branch as the current base
+    --no-verify           allow pre-rebase hook to run
+    -q, --quiet           be quiet. implies --no-stat
+    -v, --verbose         display a diffstat of what changed upstream
+    -n, --no-stat         do not show diffstat of what changed upstream
+    --signoff             add a Signed-off-by trailer to each commit
+    --committer-date-is-author-date
+                          make committer date match author date
+    --reset-author-date   ignore author date and use current date
+    -C <n>                passed to 'git apply'
+    --ignore-whitespace   ignore changes in whitespace
+    --whitespace <action>
+                          passed to 'git apply'
+    -f, --force-rebase    cherry-pick all commits, even if unchanged
+    --no-ff               cherry-pick all commits, even if unchanged
+    --continue            continue
+    --skip                skip current patch and continue
+    --abort               abort and check out the original branch
+    --quit                abort but keep HEAD where it is
+    --edit-todo           edit the todo list during an interactive rebase
+    --show-current-patch  show the patch file being applied or merged
+    --apply               use apply strategies to rebase
+    -m, --merge           use merging strategies to rebase
+    -i, --interactive     let the user edit the list of commits to rebase
+    --rerere-autoupdate   update the index with reused conflict resolution if possible
+    --empty <{drop,keep,ask}>
+                          how to handle commits that become empty
+    --autosquash          move commits that begin with squash!/fixup! under -i
+    --update-refs         update branches that point to commits that are being rebased
+    -S, --gpg-sign[=<key-id>]
+                          GPG-sign commits
+    --autostash           automatically stash/stash pop before and after
+    -x, --exec <exec>     add exec lines after each commit of the editable list
+    -r, --rebase-merges[=<mode>]
+                          try to rebase merges instead of skipping them
+    --fork-point          use 'merge-base --fork-point' to refine upstream
+    -s, --strategy <strategy>
+                          use the given merge strategy
+    -X, --strategy-option <option>
+                          pass the argument through to the merge strategy
+    --root                rebase all reachable commits up to the root(s)
+    --reschedule-failed-exec
+                          automatically re-schedule any `exec` that fails
+    --reapply-cherry-picks
+                          apply all changes, even those already present upstream
+
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git rebase --continue
+dropping f15a3877c741b3ed32c85c750133156779de94f6 contact page added -- patch contents already upstream
+dropping 9b204ce78b516c4e6e8d4736237572b098768c0d frequently asked questions -- patch contents already upstream
+dropping 3367779d2a768bec65d5a191c3bb99ea1d8a8ec1 final faq commit -- patch contents already upstream
+Successfully rebased and updated refs/heads/ft/home-page-redesign.
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git add .
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git commit -m "after rebasing"
+[ft/home-page-redesign a2c272b] after rebasing
+ 1 file changed, 2 insertions(+)
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git push origin ft/home-page-redesing
+error: src refspec ft/home-page-redesing does not match any
+error: failed to push some refs to 'https://github.com/pinsoegustave/Gym-Git-Exercises-Solutions.git'
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git push origin ft/home-page-redesign
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 354 bytes | 354.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/pinsoegustave/Gym-Git-Exercises-Solutions.git
+   3367779..a2c272b  ft/home-page-redesign -> ft/home-page-redesign
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % 
+```
