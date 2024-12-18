@@ -1,8 +1,8 @@
 # Gym-Git-Exercises-Solutions
 
-##Bundle 1
+## Bundle 1
 
-###Exercise 1
+### Exercise 1
 ```bash
 To push to the branch of the same name on the remote, use
 
