@@ -447,3 +447,200 @@ To https://github.com/pinsoegustave/Gym-Git-Exercises-Solutions.git
    f344efa..224551f  ft/bundle2 -> ft/bundle2
 gymkura@kuras-iMac Gym-Git-Exercises-Solutions % 
 ```
+
+### Exercise 2
+```bash
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git pull
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 4 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (4/4), 1.87 KiB | 479.00 KiB/s, done.
+From https://github.com/pinsoegustave/Gym-Git-Exercises-Solutions
+   64c1417..9cde33a  master     -> origin/master
+Updating 64c1417..9cde33a
+Fast-forward
+ README.md | 123 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ style.css |   5 -----
+ team.html |   1 +
+ 3 files changed, 124 insertions(+), 5 deletions(-)
+ delete mode 100644 style.css
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git branch -m ft/service-redesign
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git add .
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git commit -m "New list of services "
+[ft/service-redesign c261fb5] New list of services
+ 1 file changed, 6 insertions(+)
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git push         
+fatal: The upstream branch of your current branch does not match
+the name of your current branch.  To push to the upstream branch
+on the remote, use
+
+    git push origin HEAD:master
+
+To push to the branch of the same name on the remote, use
+
+    git push origin HEAD
+
+To choose either option permanently, see push.default in 'git help config'.
+
+To avoid automatically configuring an upstream branch when its name
+won't match the local branch, see option 'simple' of branch.autoSetupMerge
+in 'git help config'.
+
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git push origin ft/service-redesign
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 368 bytes | 368.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote: 
+remote: Create a pull request for 'ft/service-redesign' on GitHub by visiting:
+remote:      https://github.com/pinsoegustave/Gym-Git-Exercises-Solutions/pull/new/ft/service-redesign
+remote: 
+To https://github.com/pinsoegustave/Gym-Git-Exercises-Solutions.git
+ * [new branch]      ft/service-redesign -> ft/service-redesign
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git checkout master
+branch 'master' set up to track 'origin/master'.
+Switched to a new branch 'master'
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git add .
+\%                                                                                                                                                                                                                                                                   
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git commit -m "Added changes from master"   
+[master 103446f] Added changes from master
+ 1 file changed, 5 insertions(+)
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git push origin master
+To https://github.com/pinsoegustave/Gym-Git-Exercises-Solutions.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/pinsoegustave/Gym-Git-Exercises-Solutions.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git pull 
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (1/1), 915 bytes | 457.00 KiB/s, done.
+From https://github.com/pinsoegustave/Gym-Git-Exercises-Solutions
+   9cde33a..1fd47d4  master     -> origin/master
+Auto-merging services.html
+CONFLICT (content): Merge conflict in services.html
+error: could not apply 103446f... Added changes from master
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply 103446f... Added changes from master
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git diff
+diff --cc services.html
+index caf9083,c143cd7..0000000
+--- a/services.html
++++ b/services.html
+@@@ -7,11 -7,10 +7,19 @@@
+  </head>
+  <body>
+      <h2>Here is a list of our services.</h2>
+++<<<<<<< HEAD
+ +    <ul>
+ +        <li>Programming</li>
+ +        <li>Gaming</li>
+ +        <li>Coding</li>
+ +        <li>Solving DSA</li>
+ +    </ul>
+++=======
++     <main>
++         <strong>Baking Soda</strong>
++         <b>Branching trees</b>
++         <i>Fashion Designing</i>
++     </main>
+++>>>>>>> 103446f (Added changes from master)
+  </body>
+  </html>
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git merge
+error: Merging is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git merge
+error: Merging is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git add services.html 
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git commit -m "Solved conflicts"
+[detached HEAD e095578] Solved conflicts
+ 1 file changed, 1 insertion(+)
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git push origin master
+To https://github.com/pinsoegustave/Gym-Git-Exercises-Solutions.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/pinsoegustave/Gym-Git-Exercises-Solutions.git'
+hint: Updates were rejected because a pushed branch tip is behind its remote
+hint: counterpart. Check out this branch and integrate the remote changes
+hint: (e.g. 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git pull https://github.com/pinsoegustave/Gym-Git-Exercises-Solutions.git'\
+quote> \
+quote> /
+quote> q
+quote> ''
+quote> ≈
+quote> q:
+quote> :q
+quote> 
+quote> 
+quote> 
+quote> git commit -m "Solved conflicts"
+quote>  
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git pull https://github.com/pinsoegustave/Gym-Git-Exercises-Solutions.git' 
+quote> 
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git pull https://github.com/pinsoegustave/Gym-Git-Exercises-Solutions.git 
+From https://github.com/pinsoegustave/Gym-Git-Exercises-Solutions
+ * branch            HEAD       -> FETCH_HEAD
+fatal: It seems that there is already a rebase-merge directory, and
+I wonder if you are in the middle of another rebase.  If that is the
+case, please try
+        git rebase (--continue | --abort | --skip)
+If that is not the case, please
+        rm -fr ".git/rebase-merge"
+and run me again.  I am stopping in case you still have something
+valuable there.
+
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git rebase --continue
+Successfully rebased and updated refs/heads/master.
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git commit -m "Resolved conflicts"
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git add .
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git add .
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git commit -m "Resolve conflicts"
+[master 12912f0] Resolve conflicts
+ 1 file changed, 2 insertions(+)
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git push origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/pinsoegustave/Gym-Git-Exercises-Solutions.git'
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % git push origin master
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 654 bytes | 654.00 KiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 2 local objects.
+To https://github.com/pinsoegustave/Gym-Git-Exercises-Solutions.git
+   1fd47d4..12912f0  master -> master
+gymkura@kuras-iMac Gym-Git-Exercises-Solutions % 
+```
