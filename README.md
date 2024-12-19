@@ -1353,3 +1353,34 @@ To https://github.com/pinsoegustave/git-cafe-exercise.git
    d1d3f9c..d879e8b  main -> main
 gymkura@kuras-iMac git-cafe-exercise % 
 ```
+## Bundle 6
+
+### Exercise 1
+```bash
+gymkura@kuras-iMac git-cafe-exercise % git branch feature
+gymkura@kuras-iMac git-cafe-exercise % git checkout feature
+Switched to branch 'feature'
+gymkura@kuras-iMac git-cafe-exercise % git add .
+gymkura@kuras-iMac git-cafe-exercise % git commit -m "Change: Menu page, added a list of menu"
+[feature bef00dd] Change: Menu page, added a list of menu
+ 1 file changed, 6 insertions(+)
+gymkura@kuras-iMac git-cafe-exercise % git push origin main
+Everything up-to-date
+gymkura@kuras-iMac git-cafe-exercise % git push origin feature
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 517 bytes | 517.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote: 
+remote: Create a pull request for 'feature' on GitHub by visiting:
+remote:      https://github.com/pinsoegustave/git-cafe-exercise/pull/new/feature
+remote: 
+To https://github.com/pinsoegustave/git-cafe-exercise.git
+ * [new branch]      feature -> feature
+gymkura@kuras-iMac git-cafe-exercise % git status
+On branch feature
+nothing to commit, working tree clean
+gymkura@kuras-iMac git-cafe-exercise % 
+```
