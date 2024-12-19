@@ -1267,3 +1267,68 @@ Everything up-to-date
 kuras-iMac:Gym-Git-Exercises-Solutions gymkura$ git push git-copy1
 Everything up-to-date
 ```
+
+### Exercise 2
+```bash
+kuras-iMac:Gym-Git-Exercises-Solutions gymkura$ git branch ft/footer
+kuras-iMac:Gym-Git-Exercises-Solutions gymkura$ git checkout ft/footer
+Switched to branch 'ft/footer'
+kuras-iMac:Gym-Git-Exercises-Solutions gymkura$ git add .
+kuras-iMac:Gym-Git-Exercises-Solutions gymkura$ git commit -m "feat: Changes in the footer branch"
+[ft/footer 3d0bce5] feat: Changes in the footer branch
+ 1 file changed, 19 insertions(+)
+ create mode 100644 footer.html
+kuras-iMac:Gym-Git-Exercises-Solutions gymkura$ git push 
+fatal: The current branch ft/footer has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/footer
+
+kuras-iMac:Gym-Git-Exercises-Solutions gymkura$ git push origin ft/footer
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 526 bytes | 526.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:      https://github.com/pinsoegustave/Gym-Git-Exercises-Solutions/pull/new/ft/footer
+remote: 
+To https://github.com/pinsoegustave/Gym-Git-Exercises-Solutions.git
+ * [new branch]      ft/footer -> ft/footer
+kuras-iMac:Gym-Git-Exercises-Solutions gymkura$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+kuras-iMac:Gym-Git-Exercises-Solutions gymkura$ git branch ft/squashing
+kuras-iMac:Gym-Git-Exercises-Solutions gymkura$ git branch ft/squashing
+fatal: A branch named 'ft/squashing' already exists.
+kuras-iMac:Gym-Git-Exercises-Solutions gymkura$ git checkout ft/squashing
+Switched to branch 'ft/squashing'
+kuras-iMac:Gym-Git-Exercises-Solutions gymkura$ git merge --squash ft/footer
+Updating 7b0fa58..3d0bce5
+Fast-forward
+Squash commit -- not updating HEAD
+ footer.html | 19 +++++++++++++++++++
+ 1 file changed, 19 insertions(+)
+ create mode 100644 footer.html
+kuras-iMac:Gym-Git-Exercises-Solutions gymkura$ git commit -m "Squashed commit from ft/footer"
+[ft/squashing 5163160] Squashed commit from ft/footer
+ 1 file changed, 19 insertions(+)
+ create mode 100644 footer.html
+kuras-iMac:Gym-Git-Exercises-Solutions gymkura$ git push origin ft/squashing
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 524 bytes | 524.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/pinsoegustave/Gym-Git-Exercises-Solutions/pull/new/ft/squashing
+remote: 
+To https://github.com/pinsoegustave/Gym-Git-Exercises-Solutions.git
+ * [new branch]      ft/squashing -> ft/squashing
+kuras-iMac:Gym-Git-Exercises-Solutions gymkura$
+```
+
