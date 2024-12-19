@@ -1332,3 +1332,24 @@ To https://github.com/pinsoegustave/Gym-Git-Exercises-Solutions.git
 kuras-iMac:Gym-Git-Exercises-Solutions gymkura$
 ```
 
+## Bundle 5
+### Exercise 1
+Public link from GitHub Pages: https://pinsoegustave.github.io/Gym-Git-Exercises-Solutions/
+
+### Exercise 2 
+```bash
+gymkura@kuras-iMac git-cafe-exercise % git add .
+gymkura@kuras-iMac git-cafe-exercise % git commit -m "Changed the name of index"
+[main d879e8b] Changed the name of index
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+gymkura@kuras-iMac git-cafe-exercise % git push origin main 
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 333 bytes | 333.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/pinsoegustave/git-cafe-exercise.git
+   d1d3f9c..d879e8b  main -> main
+gymkura@kuras-iMac git-cafe-exercise % 
+```
