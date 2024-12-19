@@ -1209,3 +1209,61 @@ To https://github.com/pinsoegustave/Gym-Git-Exercises-Solutions.git
    3367779..a2c272b  ft/home-page-redesign -> ft/home-page-redesign
 gymkura@kuras-iMac Gym-Git-Exercises-Solutions % 
 ```
+
+## Bundle 4
+
+### Exercise 1
+```bash
+kuras-iMac:Gym-Git-Exercises-Solutions gymkura$ git push git-copy
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+kuras-iMac:Gym-Git-Exercises-Solutions gymkura$ git push git-copy
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+kuras-iMac:Gym-Git-Exercises-Solutions gymkura$ git push git-copy
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+kuras-iMac:Gym-Git-Exercises-Solutions gymkura$ git remote add git-copy2 git@github.com:pinsoegustave/gym-git-exercises-clone.git
+kuras-iMac:Gym-Git-Exercises-Solutions gymkura$ git add .
+kuras-iMac:Gym-Git-Exercises-Solutions gymkura$ git commit -m "feat: Emoji's on homepage"
+[master 516fec2] feat: Emoji's on homepage
+ 1 file changed, 1 insertion(+)
+kuras-iMac:Gym-Git-Exercises-Solutions gymkura$ git push git-copy2
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+kuras-iMac:Gym-Git-Exercises-Solutions gymkura$ git remote add git-copy1 https://github.com/pinsoegustave/gym-git-exercises-clone.git
+kuras-iMac:Gym-Git-Exercises-Solutions gymkura$ git push git-copy1
+Counting objects: 89, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (86/86), done.
+Writing objects: 100% (89/89), 21.58 KiB | 10.79 MiB/s, done.
+Total 89 (delta 45), reused 3 (delta 0)
+remote: Resolving deltas: 100% (45/45), done.
+To https://github.com/pinsoegustave/gym-git-exercises-clone.git
+ * [new branch]      master -> master
+kuras-iMac:Gym-Git-Exercises-Solutions gymkura$ git push
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 321 bytes | 321.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/pinsoegustave/Gym-Git-Exercises-Solutions.git
+   538c22f..516fec2  master -> master
+kuras-iMac:Gym-Git-Exercises-Solutions gymkura$ git push
+Everything up-to-date
+kuras-iMac:Gym-Git-Exercises-Solutions gymkura$ git push git-copy1
+Everything up-to-date
+```
